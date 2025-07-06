@@ -1,1 +1,10 @@
 [2025-05-23 00:47:56,819: INFO: main: Welcome to custom log]
+[2025-07-06 23:28:18,390: INFO: main: >>>>> stage Data Ingestion Stage started <<<<<]
+[2025-07-06 23:28:18,392: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2025-07-06 23:28:18,392: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-07-06 23:28:18,393: INFO: common: created directory at: artifacts]
+[2025-07-06 23:28:18,393: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-07-06 23:28:18,393: INFO: data_ingestion: Downloading data from https://drive.google.com/file/d/1vlhZ5c7abUKF8xXERIw6m9Te8fW7ohw3/view?usp=drive_link into file artifacts/data_ingestion/data.zip]
+[2025-07-06 23:28:47,027: INFO: data_ingestion: Downloaded data from https://drive.google.com/file/d/1vlhZ5c7abUKF8xXERIw6m9Te8fW7ohw3/view?usp=drive_link into file artifacts/data_ingestion/data.zip]
+[2025-07-06 23:28:47,797: INFO: main: >>>>> stage Data Ingestion Stage completed <<<<<
+------------]
