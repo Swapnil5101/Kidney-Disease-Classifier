@@ -36,3 +36,26 @@ source ./venv_name/bin/activate
 ```bash
 pip install -r requirements.txt
 ```
+
+## MLflow and DagsHub
+
+- [MLflow Documentation](https://mlflow.org/docs/latest/index.html)
+
+- [DagsHub Documentation](https://dagshub.com/)
+
+
+
+MLFLOW_TRACKING_URI=https://dagshub.com/Swapnil5101/Kidney-Disease-Classifier.mlflow
+
+MLFLOW_TRACKING_USERNAME=f4b146a8163da584e740a5b5b884330b40ade30b
+
+
+Run this to export as env variables:
+
+```bash
+
+export MLFLOW_TRACKING_URI=https://dagshub.com/Swapnil5101/Kidney-Disease-Classifier.mlflow
+
+export MLFLOW_TRACKING_USERNAME=f4b146a8163da584e740a5b5b884330b40ade30b
+
+```
