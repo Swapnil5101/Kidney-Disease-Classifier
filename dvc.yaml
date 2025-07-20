@@ -1,0 +1,53 @@
+stages:
+  data_ingestion_stage1:
+    cmd: python src/CNN_Classifier/pipeline/data_ingestion_stage1.py
+    deps:
+      - src/CNN_Classifier/pipeline/data_ingestion_stage1.py
+      - config/config.yaml
+    outs:
+      - artifacts/data_ingestion/kidney-ct-scan-image
+
+
+  base_model_stage2:
+    cmd: python src/CNN_Classifier/pipeline/base_model_stage2.py
+    deps:
+      - src/CNN_Classifier/pipeline/base_model_stage2.py
+      - config/config.yaml
+    params:
+      - IMAGE_SIZE
+      - INCLUDE_TOP
+      - WEIGHTS
+      - LEARNING_RATE
+      - CLASSES
+    outs:
+      - artifacts/prepare_base_model
+
+
+  model_training_stage3:
+    cmd: python src/CNN_Classifier/pipeline/model_training_stage3.py
+    deps:
+      - src/CNN_Classifier/pipeline/model_training_stage3.py
+      - config/config.yaml
+      - artifacts/data_ingestion/kidney-ct-scan-image
+    params:
+      - IMAGE_SIZE
+      - BATCH_SIZE
+      - EPOCHS
+      - AUGMENTATION
+    outs:
+      - artifacts/training/model.h5
+
+
+  model_evaluation_mlflow_stage4:
+    cmd: python src/CNN_Classifier/pipeline/model_evaluation_mlflow_stage4.py
+    deps:
+      - src/CNN_Classifier/pipeline/model_evaluation_mlflow_stage4.py
+      - config/config.yaml
+      - artifacts/data_ingestion/kidney-ct-scan-image
+      - artifacts/training/model.h5
+    params:
+      - IMAGE_SIZE
+      - BATCH_SIZE
+    metrics:
+      - scores.json:
+          cache: false

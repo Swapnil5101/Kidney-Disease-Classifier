@@ -59,3 +59,9 @@ export MLFLOW_TRACKING_URI=https://dagshub.com/Swapnil5101/Kidney-Disease-Classi
 export MLFLOW_TRACKING_USERNAME=f4b146a8163da584e740a5b5b884330b40ade30b
 
 ```
+
+### DVC cmd
+
+1. dvc init
+2. dvc repro
+3. dvc dag
