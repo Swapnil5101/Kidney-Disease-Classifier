@@ -130,12 +130,14 @@ export MLFLOW_TRACKING_USERNAME=f4b146a8163da584e740a5b5b884330b40ade30b
 
 ## 7. Setup github secrets:
 
-    AWS_ACCESS_KEY_ID=
+    AWS_ACCESS_KEY_ID
 
-    AWS_SECRET_ACCESS_KEY=
+    AWS_SECRET_ACCESS_KEY
 
-    AWS_REGION = us-east-1
+    AWS_REGION
 
-    AWS_ECR_LOGIN_URI = demo>>  566373416292.dkr.ecr.ap-south-1.amazonaws.com
+    AWS_ECR_LOGIN_URI =  566373416292.dkr.ecr.ap-south-1.amazonaws.com (demo)
 
     ECR_REPOSITORY_NAME = simple-app
+
+    (Fill in your above credentials via GitHub Actions' settings)
